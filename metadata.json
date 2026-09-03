@@ -1,0 +1,6 @@
+{
+  "name": "Fundiferro Formas",
+  "description": "Soluções em formas para parede de concreto, segurança, acessórios e equipamentos para construção civil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
