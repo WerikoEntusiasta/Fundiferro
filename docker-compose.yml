@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  fundiferro:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: fundiferro_app
+    restart: unless-stopped
+    ports:
+      - "3959:3959"
+    environment:
+      - NODE_ENV=production
+      - APP_PORT=3959
+      # Configure suas variáveis de ambiente aqui ou através do painel do Easypanel:
+      # - SMTP_HOST=smtp.gmail.com
+      # - SMTP_PORT=587
+      # - SMTP_USER=seuemail@gmail.com
+      # - SMTP_PASS=suasenha
+      # - EMAIL_TO=werikplaystore@gmail.com

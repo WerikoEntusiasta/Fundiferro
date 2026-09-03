@@ -13,7 +13,8 @@ import { createServer as createViteServer } from 'vite';
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+// Default to 3000 in dev/sandbox; uses APP_PORT (3959) in Docker/Easypanel environment
+const PORT = process.env.APP_PORT ? parseInt(process.env.APP_PORT, 10) : 3000;
 
 // Body Parsers
 app.use(express.json({ limit: '250mb' }));
